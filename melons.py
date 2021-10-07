@@ -29,6 +29,12 @@ class Melon(object):
         else:
             return f"{self.color} {self.weight:.2f} lbs {self.melon_type}"
 
-# FIXME: Add Squash class definition here.
 class Squash(Melon):
-    pass
+    """Creating Squash class with Melon class parent"""
+
+    def prep(self):
+        """Prepare the squash."""
+
+        # Calling the prep from parent Melon + adding paint
+        super().prep()
+        robots.painterbot.paint(self)    
